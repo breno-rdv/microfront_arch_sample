@@ -1,0 +1,24 @@
+{
+  "name": "microfront_arch_sample",
+  "version": "0.0.1",
+  "description": "Application featuring micro-frontend architecture",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/breno-rdv/microfront_arch_sample.git"
+  },
+  "keywords": [
+    "react",
+    "micro-frontend",
+    "webpack"
+  ],
+  "author": "Breno Ribeiro do Val",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/breno-rdv/microfront_arch_sample/issues"
+  },
+  "homepage": "https://github.com/breno-rdv/microfront_arch_sample#readme"
+}
