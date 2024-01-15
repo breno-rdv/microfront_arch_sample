@@ -2,8 +2,10 @@ import React from 'react';
 
 function App() {
     return (
-        <main>
-            This is the main App
+        <main className='container'>
+            <header className='header'></header>
+            <section className='body'></section>
+            <footer className='footer'></footer>
         </main>
     );
 }

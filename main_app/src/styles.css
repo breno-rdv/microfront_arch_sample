@@ -1,0 +1,19 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: [header] 20% [body] 70% [footer]10%;
+    background-color: red;
+}
+
+.header {
+    grid-area: header;
+}
+
+.body {
+    grid-area: body;
+}
+
+.footer {
+    grid-area: footer;
+}
