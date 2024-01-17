@@ -3,9 +3,10 @@ import './styles.css';
 
 function App() {
     return (
-        <div className='container'>
-            Header
-        </div>
+        <header className='container'>
+            <h1 className='title'>Crypto App</h1>
+            <div className='amount'>R$ - 0,00</div>
+        </header>
     );
 }
 

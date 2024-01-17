@@ -1,3 +1,33 @@
-.container {
-    background-color: aqua;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header.container {
+    background-color: #56000b;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+    padding: 2rem;
+}
+
+h1.title {
+    color: #FFF;
+    font-size: 4rem;
+}
+
+div.amount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+    color: #56008b;
+    font-size: 1.5rem;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 5px;
 }
