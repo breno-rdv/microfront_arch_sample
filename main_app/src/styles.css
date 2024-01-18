@@ -11,3 +11,12 @@
     grid-template-columns: 100%;
     grid-template-rows: [header] 10vh [body] 80vh [footer]10vh;
 }
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5rem;
+    background-color: #56000b;
+    color: #FFF;
+}

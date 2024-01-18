@@ -17,9 +17,8 @@ const data = [
         name: 'Dogecoin',
         price: 1
     }
-]
+];
 
-// TODO: add style to cards and button
 function CriptoList() {
     return (
         <div className="cripto-list">

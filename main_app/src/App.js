@@ -9,7 +9,7 @@ function App() {
             <section className='body'>
                 <CriptoList />
             </section>
-            <footer className='footer'>BLa</footer>
+            <footer className='footer'>All Rights Reserved</footer>
         </main>
     );
 }
