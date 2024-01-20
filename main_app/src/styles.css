@@ -20,3 +20,16 @@
     background-color: #56000b;
     color: #FFF;
 }
+
+.footer button {
+    color: #56000b;
+    width: 10rem;
+    height: 2rem;
+    border-radius: 5px;
+    border: none
+}
+
+.footer button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
