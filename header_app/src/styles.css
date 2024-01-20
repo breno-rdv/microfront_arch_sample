@@ -24,6 +24,7 @@ div.amount {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
     background-color: #FFF;
     color: #56008b;
     font-size: 1.5rem;

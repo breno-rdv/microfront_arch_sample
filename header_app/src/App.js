@@ -5,7 +5,10 @@ function App() {
     return (
         <header className='container'>
             <h1 className='title'>Crypto App</h1>
-            <div className='amount'>R$ - 0,00</div>
+            <div className='amount'>
+                <span class="material-symbols-outlined">shopping_cart</span>
+                <span>R$ 0,00</span>
+            </div>
         </header>
     );
 }
