@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { ModuleFederationPlugin } = require('webpack').container;
 
 module.exports = {
     mode: 'development',
@@ -10,6 +11,13 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
+        new ModuleFederationPlugin({
+            name: 'checkoutApp',
+            filename: 'remoteEntry.js',
+            exposes: {
+                './checkout': './src/App.js',
+            }
+        }),
         new HtmlWebpackPlugin({
             template: './src/index.html',
             filename: 'index.html',

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack build --config webpack.config.js",
-    "serve": "webpack serve --config webpack.config.js"
+    "serve": "webpack serve --config webpack.config.js",
+    "remote": "webpack serve --config webpack.config.js --port 9003"
   },
   "author": "Breno Ribeiro do Val",
   "license": "MIT",
