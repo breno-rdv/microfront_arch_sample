@@ -12,10 +12,10 @@ module.exports = {
     },
     plugins: [
         new ModuleFederationPlugin({
-            'name': 'headerApp',
+            'name': 'header',
             'filename': 'remoteEntry.js',
             exposes: {
-                './header': './src/App.js',
+                './Header': './src/App.js',
             }
         }),
         new HtmlWebpackPlugin({
