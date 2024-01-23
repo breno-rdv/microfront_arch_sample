@@ -3,7 +3,7 @@ import './styles.css';
 
 function App() {
     return (
-        <div className='container'>
+        <div className='cart-container'>
             <div className='cart'>
                 <div className='cart-title'>
                     <span class="material-symbols-outlined">shopping_cart</span>
