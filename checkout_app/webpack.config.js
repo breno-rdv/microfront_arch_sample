@@ -12,10 +12,10 @@ module.exports = {
     },
     plugins: [
         new ModuleFederationPlugin({
-            name: 'checkoutApp',
+            name: 'checkout',
             filename: 'remoteEntry.js',
             exposes: {
-                './checkout': './src/App.js',
+                './Checkout': './src/App.js',
             }
         }),
         new HtmlWebpackPlugin({
