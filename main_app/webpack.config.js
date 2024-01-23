@@ -14,7 +14,8 @@ module.exports = {
         new ModuleFederationPlugin({
             name: 'mainApp',
             remotes: {
-                header: 'header@http://localhost:9005/remoteEntry.js'
+                header: 'header@http://localhost:9005/remoteEntry.js',
+                checkout: 'checkout@http://localhost:9003/remoteEntry.js'
             }
         }),
         new HtmlWebpackPlugin({
