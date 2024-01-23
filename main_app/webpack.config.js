@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { ModuleFederationPlugin } = require('webpack').container;
 
 module.exports = {
     mode: 'development',
@@ -10,6 +11,12 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
+        new ModuleFederationPlugin({
+            name: 'mainApp',
+            remotes: {
+                header: 'header@http://localhost:9005/remoteEntry.js'
+            }
+        }),
         new HtmlWebpackPlugin({
             template: './src/index.html',
             filename: 'index.html'

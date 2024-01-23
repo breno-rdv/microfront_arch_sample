@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import CriptoList from './pages/CriptoList/CriptoList';
 import './styles.css';
 
+const Header =  React.lazy(() => import('header/header'));
+
 function Checkout() {
     return (
         <div>
@@ -15,7 +17,11 @@ function App() {
     return (
         <Router>
             <main className='container'>
-                <header className='header'>BLa</header>
+                <header className='header'>
+                    <React.Suspense fallback={<h1>Loading....</h1>}>
+                        <Header />
+                    </React.Suspense>
+                </header>
                 <section className='body'>
                     <Switch>
                         <Route exact path="/">
