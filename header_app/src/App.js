@@ -12,7 +12,7 @@ function App() {
                 cartData.onmessage = (event) => {
                     setValue(prev => prev + event.data)
                 };
-            });
+            }).catch(e => console.log(e));
     }, [value]);
 
     return (
