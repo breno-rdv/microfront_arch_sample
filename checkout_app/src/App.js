@@ -10,7 +10,7 @@ function App({ total }) {
                     <span className="material-symbols-outlined">shopping_cart</span>
                     <div>Check-out</div>
                 </div>
-                <div className='value'>{`R$ ${total},00`}</div>
+                <div className='value'>{`R$ ${total ?? 0},00`}</div>
                 <button>Finalizar compra</button>
             </div>
         </div>
