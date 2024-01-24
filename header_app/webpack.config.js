@@ -14,9 +14,20 @@ module.exports = {
         new ModuleFederationPlugin({
             'name': 'header',
             'filename': 'remoteEntry.js',
+            remotes: {
+                mainApp: 'mainApp@localhost:9000/remoteEntry.js',
+            },
             exposes: {
                 './Header': './src/App.js',
-            }
+            },
+            shared: {
+                react: {
+                    eager: true,
+                },
+                'react-dom': {
+                    eager: true,
+                },
+            },
         }),
         new HtmlWebpackPlugin({
             template: './src/index.html',

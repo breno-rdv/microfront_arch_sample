@@ -2,12 +2,25 @@ import React from 'react';
 import './styles.css';
 
 function App() {
+
+    const [value, setValue] = React.useState(0);
+
+    React.useEffect(() => {
+        import('mainApp/CartData')
+            .then(module => {
+                const cartData = module.default;
+                cartData.onmessage = (event) => {
+                    setValue(prev => prev + event.data)
+                };
+            });
+    }, [value]);
+
     return (
         <header className='container'>
             <h1 className='title'>Crypto App</h1>
             <div className='amount'>
-                <span class="material-symbols-outlined">shopping_cart</span>
-                <span>R$ 0,00</span>
+                <span className="material-symbols-outlined">shopping_cart</span>
+                <span>{`R$ ${value},00`}</span>
             </div>
         </header>
     );

@@ -16,7 +16,15 @@ module.exports = {
             filename: 'remoteEntry.js',
             exposes: {
                 './Checkout': './src/App.js',
-            }
+            },
+            shared: {
+                react: {
+                    eager: true,
+                },
+                'react-dom': {
+                    eager: true,
+                },
+            },
         }),
         new HtmlWebpackPlugin({
             template: './src/index.html',

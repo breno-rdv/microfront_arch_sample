@@ -8,6 +8,8 @@ const Header =  React.lazy(() => import('header/Header'));
 const Checkout = React.lazy(() => import('checkout/Checkout'));
 
 function App() {
+    const [ total, setTotal ] = React.useState(0);
+
     return (
         <Router>
             <main className='container'>
@@ -19,11 +21,11 @@ function App() {
                 <section className='body'>
                     <Switch>
                         <Route exact path="/">
-                            <CriptoList />
+                            <CriptoList setTotal={setTotal}/>
                         </Route>
                         <Route path="/checkout">
                             <React.Suspense fallback={<h1>Loading....</h1>}>
-                                <Checkout />
+                                <Checkout total={total}/>
                             </React.Suspense>
                         </Route>
                     </Switch>

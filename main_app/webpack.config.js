@@ -15,12 +15,23 @@ module.exports = {
             name: 'mainApp',
             remotes: {
                 header: 'header@http://localhost:9005/remoteEntry.js',
-                checkout: 'checkout@http://localhost:9003/remoteEntry.js'
-            }
+                checkout: 'checkout@http://localhost:9003/remoteEntry.js',
+            },
+            exposes: {
+                './CartData': './src/cart-observable.js',
+            },
+            shared: {
+                react: {
+                    eager: true,
+                },
+                'react-dom': {
+                    eager: true,
+                },
+            },
         }),
         new HtmlWebpackPlugin({
             template: './src/index.html',
-            filename: 'index.html'
+            filename: 'index.html',
         }),
         new MiniCssExtractPlugin()
     ],

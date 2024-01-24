@@ -1,5 +1,6 @@
 import React from "react";
 import './styles.css';
+import checkout from "../../cart-observable";
 
 const data = [
     {
@@ -19,15 +20,21 @@ const data = [
     }
 ];
 
-function CriptoList() {
+function CriptoList({ setTotal }) {
+
+    const handleButtonClick = (price) => {
+        checkout.postMessage(price);
+        setTotal(prev => prev + price);
+    }
+
     return (
         <div className="cripto-list">
             {data.map(coin => {
                 return (
                     <div key={coin.id} className="coin-card">
                         <div className="name">{coin.name}</div>
-                        <div className="price">{coin.price}</div>
-                        <button>Comprar</button>
+                        <div className="price">{`R$ ${coin.price},00`}</div>
+                        <button onClick={() => handleButtonClick(coin.price)}>Comprar</button>
                     </div>
                 )
             })}
