@@ -10,6 +10,10 @@ function App() {
             .then(module => {
                 const cartData = module.default;
                 cartData.onmessage = (event) => {
+                    if (event.data === 'clearCart') {
+                        setValue(0);
+                        return;
+                    }
                     setValue(prev => prev + event.data)
                 };
             }).catch(e => console.log(e));
