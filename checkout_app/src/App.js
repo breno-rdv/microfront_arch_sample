@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles.css';
+import { useLocation, useHistory } from 'react-router-dom';
 
 function App({ total }) {
+    const [ pathname, setPathname ] = useState(null);
+    const location = useLocation();
+    const history = useHistory();
+
+    React.useEffect(() => {
+        setPathname(location.pathname);
+    }, [location]);
+
+    const handleButtonClick = () => {
+        if (pathname === '/') return;
+        alert('Compra concluída');
+        history.replace('/?page=checkout');
+    };
 
     return (
         <div className='cart-container'>
@@ -11,7 +25,7 @@ function App({ total }) {
                     <div>Check-out</div>
                 </div>
                 <div className='value'>{`R$ ${total ?? 0},00`}</div>
-                <button>Finalizar compra</button>
+                <button onClick={() => handleButtonClick()}>Finalizar compra</button>
             </div>
         </div>
     );

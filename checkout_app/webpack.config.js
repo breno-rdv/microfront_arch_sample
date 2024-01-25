@@ -27,6 +27,9 @@ module.exports = {
                 'react-dom': {
                     eager: true,
                 },
+                'react-router-dom': {
+                    eager: true,
+                }
             },
         }),
         new HtmlWebpackPlugin({
