@@ -33,3 +33,8 @@
     cursor: pointer;
     transform: scale(1.1);
 }
+
+.footer button:disabled {
+    cursor: not-allowed;
+    transform: none;
+}
