@@ -1,17 +1,17 @@
-# microfront_arch_sample
+# Micro-frontend App Sample
 A sample application featuring micro-frontend architecture
 
-## A litle bit about Microfrontend architecture
-Microfrontend, as its twin, is a small piece of software, defined by its bounded context, that will interact with others to achieve a specific goal.
+## A little bit about Micro-frontend architecture
+Micro-frontend, as its twin, is a small piece of software, defined by its bounded context, that will interact with others to achieve a specific goal.
 
->The idea behind Micro Frontends is to think about a web app as a composition of features which are owned by independent teams. 
+>The idea behind Micro-frontends is to think about a web app as a composition of features which are owned by independent teams. 
 
 #### Core concepts
 - Be technology agnostic
 - Teams working independently
 - Favor Native Browser APIs rather than Custom APIs
 
-> Remember: Unlike microservices, all Microfrontends will be sharing the same engine and running on top of the same platform.
+> Remember: Unlike microservices, all Micro-frontends will be sharing the same engine and running on top of the same platform.
 
 ## Description
 Mimicking a `Online Cryptocurrency shop`, the application is composed by three micro-frontends, one being the host app, and the other two being components (Header and Checkout).
@@ -24,7 +24,7 @@ Technologies used:
 
 ## Running the project
 
-The three Microfrontends can be ran separately, but in order to have it running perfectly, without having to refresh the page, re-run the build, etc., let's run them in a safe order.
+The three Micro-frontends can be ran separately, but in order to have it running perfectly, without having to refresh the page, re-run the build, etc., let's run them in a safe order.
 
 ### Running Checkout App
 
